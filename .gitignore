@@ -1,27 +1,22 @@
 #Dependencies
-
 /node_modules
 /.pnp
 .pnp.js
 
 #Testing
-
 /coverage
 
 #Production
-
 /build
 /dist
 
 #Environment Variables
-
 .env
 .env.test
 .env.production
 .env.local
 
 #Logs
-
 logs
 .log
 npm-debug.log
@@ -29,7 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 #OS Generated Files
-
 .DS_Store
 .DS_Store?
 ._*
@@ -39,12 +33,13 @@ ehthumbs.db
 Thumbs.db
 
 #IDEs and Editors
-
 .vscode/
 .idea/
 *.suo
-.ntvs
+*.ntvs
 *.njsproj
 *.sln
 *.sw?
+
+#Prisma Generated
 /src/generated/prisma
