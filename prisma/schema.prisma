@@ -1,0 +1,25 @@
+// 1. Only one generator block
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 2. The datasource block is now minimal; 
+// Prisma 7 handles the connection via your prisma.config.ts file.
+datasource db {
+  provider = "postgresql"
+}
+
+// 3. Your Models
+model User {
+  id   Int    @id @default(autoincrement())
+  name String
+}
+
+model Transaction {
+  id             String   @id @default(uuid())
+  idempotencyKey String   @unique 
+  amount         Float
+  currency       String   @default("USD")
+  status         String
+  createdAt      DateTime @default(now())
+}
